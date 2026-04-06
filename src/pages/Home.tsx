@@ -26,7 +26,7 @@ const Home = () => {
             className="max-w-3xl"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-              Reliable Zipper Solutions for <span className="text-blue-500">Every Industry</span>
+              Reliable Zipper Solutions for <span className="text-brand-primary">Every Industry</span>
             </h1>
             <p className="text-xl text-gray-300 mb-10 leading-relaxed">
               Premium manufacturing of zippers, sliders, and components. 
@@ -35,7 +35,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/contact" 
-                className="bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all flex items-center justify-center space-x-2 shadow-xl shadow-blue-900/20"
+                className="bg-brand-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600 transition-all flex items-center justify-center space-x-2 shadow-xl shadow-green-900/20"
               >
                 <span>Request a Quote</span>
                 <ArrowRight size={20} />
@@ -69,7 +69,7 @@ const Home = () => {
               { label: 'Happy Clients', value: '500+', icon: Users },
             ].map((stat, i) => (
               <div key={i} className="flex flex-col items-center text-center">
-                <stat.icon className="text-blue-600 mb-2" size={24} />
+                <stat.icon className="text-brand-primary mb-2" size={24} />
                 <span className="text-3xl font-bold text-gray-900">{stat.value}</span>
                 <span className="text-sm text-gray-500 font-medium">{stat.label}</span>
               </div>
@@ -83,13 +83,13 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-3">Our Products</h2>
+              <h2 className="text-brand-primary font-bold tracking-wider uppercase text-sm mb-3">Our Products</h2>
               <h3 className="text-4xl font-bold text-gray-900">Complete Zipper Solutions</h3>
               <p className="text-gray-600 mt-4 text-lg">
                 From finished zippers to custom components, we provide everything you need for high-quality manufacturing.
               </p>
             </div>
-            <Link to="/products" className="text-blue-600 font-bold flex items-center space-x-2 hover:underline">
+            <Link to="/products" className="text-brand-primary font-bold flex items-center space-x-2 hover:underline">
               <span>View All Products</span>
               <ChevronRight size={20} />
             </Link>
@@ -118,7 +118,7 @@ const Home = () => {
                   <p className="text-gray-500 text-sm mb-4 line-clamp-2">{product.description}</p>
                   <Link 
                     to={`/products/${product.id}`} 
-                    className="inline-flex items-center text-blue-600 font-semibold text-sm group-hover:translate-x-1 transition-transform"
+                    className="inline-flex items-center text-brand-primary font-semibold text-sm group-hover:translate-x-1 transition-transform"
                   >
                     <span>Learn More</span>
                     <ChevronRight size={16} />
@@ -131,10 +131,10 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-blue-900 text-white">
+      <section className="py-24 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-blue-400 font-bold tracking-wider uppercase text-sm mb-3">Why Raouf Brothers</h2>
+            <h2 className="text-brand-primary font-bold tracking-wider uppercase text-sm mb-3">Why Raouf Brothers</h2>
             <h3 className="text-4xl font-bold mb-6">The Manufacturing Advantage</h3>
             <p className="text-blue-100 text-lg">
               We combine decades of expertise with state-of-the-art technology to deliver unmatched quality.
@@ -149,7 +149,7 @@ const Home = () => {
               { title: 'Global Logistics', desc: 'Efficient export processes and reliable shipping to global markets.', icon: Globe },
             ].map((item, i) => (
               <div key={i} className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors">
-                <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+                <div className="w-12 h-12 bg-brand-primary rounded-xl flex items-center justify-center mb-6">
                   <item.icon size={24} />
                 </div>
                 <h4 className="text-xl font-bold mb-4">{item.title}</h4>
@@ -164,14 +164,14 @@ const Home = () => {
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-blue-600 font-bold tracking-wider uppercase text-sm mb-3">Industries</h2>
+            <h2 className="text-brand-primary font-bold tracking-wider uppercase text-sm mb-3">Industries</h2>
             <h3 className="text-4xl font-bold text-gray-900">Versatile Applications</h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {INDUSTRIES.map((industry, i) => (
-              <div key={i} className="p-6 text-center border border-gray-100 rounded-2xl hover:border-blue-200 hover:bg-blue-50/30 transition-all group">
-                <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+              <div key={i} className="p-6 text-center border border-gray-100 rounded-2xl hover:border-green-200 hover:bg-green-50/30 transition-all group">
+                <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-brand-primary group-hover:text-white transition-colors">
                   {/* Dynamic icon rendering would go here */}
                   <Factory size={28} />
                 </div>
@@ -187,7 +187,7 @@ const Home = () => {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
-            <div className="lg:w-1/2 p-12 lg:p-16 bg-blue-600 text-white">
+            <div className="lg:w-1/2 p-12 lg:p-16 bg-brand-primary text-white">
               <h3 className="text-4xl font-bold mb-6">Get a Custom Quote Today</h3>
               <p className="text-blue-100 text-lg mb-8">
                 Tell us about your requirements and our team will get back to you with a competitive proposal within 24 hours.
@@ -195,7 +195,7 @@ const Home = () => {
               <ul className="space-y-4">
                 {['Bulk order discounts', 'Custom branding options', 'Free sample requests', 'Global shipping estimates'].map((item, i) => (
                   <li key={i} className="flex items-center space-x-3">
-                    <CheckCircle2 size={20} className="text-blue-300" />
+                    <CheckCircle2 size={20} className="text-green-300" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -206,16 +206,16 @@ const Home = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all" placeholder="John Doe" />
+                    <input type="text" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all" placeholder="John Doe" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Company Email</label>
-                    <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all" placeholder="john@company.com" />
+                    <input type="email" className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all" placeholder="john@company.com" />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Product Category</label>
-                  <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all appearance-none bg-white">
+                  <select className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all appearance-none bg-white">
                     <option>Nylon Zippers</option>
                     <option>Metal Zippers</option>
                     <option>Plastic Zippers</option>
@@ -225,9 +225,9 @@ const Home = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Message / Requirements</label>
-                  <textarea rows={4} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all" placeholder="Tell us about quantity, sizes, and any custom needs..."></textarea>
+                  <textarea rows={4} className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all" placeholder="Tell us about quantity, sizes, and any custom needs..."></textarea>
                 </div>
-                <button className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
+                <button className="w-full bg-brand-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition-all shadow-lg shadow-green-200">
                   Send Inquiry
                 </button>
               </form>

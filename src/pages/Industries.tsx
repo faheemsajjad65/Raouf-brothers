@@ -49,7 +49,7 @@ const Industries = () => {
 
   return (
     <div className="pt-24">
-      <section className="bg-gray-900 py-24 text-white">
+      <section className="bg-brand-secondary py-24 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-5xl font-bold mb-6">Industries We Serve</h1>
           <p className="text-xl text-gray-400 max-w-2xl">
@@ -70,7 +70,7 @@ const Industries = () => {
                 className={`flex flex-col lg:flex-row items-center gap-16 ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
               >
                 <div className="lg:w-1/2">
-                  <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-blue-200">
+                  <div className="w-16 h-16 bg-brand-primary rounded-2xl flex items-center justify-center text-white mb-8 shadow-lg shadow-green-200">
                     <industry.icon size={32} />
                   </div>
                   <h2 className="text-4xl font-bold text-gray-900 mb-6">{industry.name}</h2>
@@ -83,15 +83,15 @@ const Industries = () => {
                       <h4 className="font-bold text-gray-900 mb-2">Industry Needs</h4>
                       <p className="text-sm text-gray-500">{industry.needs}</p>
                     </div>
-                    <div className="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                      <h4 className="font-bold text-blue-900 mb-2">Recommended</h4>
-                      <p className="text-sm text-blue-700">{industry.recommended}</p>
+                    <div className="bg-green-50 p-6 rounded-2xl border border-green-100">
+                      <h4 className="font-bold text-green-900 mb-2">Recommended</h4>
+                      <p className="text-sm text-green-700">{industry.recommended}</p>
                     </div>
                   </div>
 
                   <Link 
                     to="/contact" 
-                    className="inline-flex items-center space-x-2 text-blue-600 font-bold hover:translate-x-2 transition-transform"
+                    className="inline-flex items-center space-x-2 text-brand-primary font-bold hover:translate-x-2 transition-transform"
                   >
                     <span>Discuss Your Industry Needs</span>
                     <ArrowRight size={20} />
@@ -106,7 +106,7 @@ const Industries = () => {
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-gray-100 hidden md:block">
-                      <p className="text-blue-600 font-bold">Trusted Partner</p>
+                      <p className="text-brand-primary font-bold">Trusted Partner</p>
                       <p className="text-gray-500 text-xs">For {industry.name}</p>
                     </div>
                   </div>

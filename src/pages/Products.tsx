@@ -41,7 +41,7 @@ const Products = () => {
                 placeholder="Search products..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 rounded-full border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                className="w-full pl-12 pr-4 py-3 rounded-full border border-gray-200 focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-all"
               />
             </div>
             <div className="flex items-center space-x-4 w-full md:w-auto">
@@ -49,7 +49,7 @@ const Products = () => {
                 <Filter size={18} />
                 <span>Filter</span>
               </button>
-              <button className="flex-1 md:flex-none bg-blue-600 text-white px-6 py-3 rounded-full font-bold hover:bg-blue-700 transition-all">
+              <button className="flex-1 md:flex-none bg-brand-primary text-white px-6 py-3 rounded-full font-bold hover:bg-green-600 transition-all">
                 Download Catalog (PDF)
               </button>
             </div>
@@ -77,7 +77,7 @@ const Products = () => {
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 right-4">
-                    <span className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-blue-600 uppercase tracking-wider">
+                    <span className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-brand-primary uppercase tracking-wider">
                       Premium
                     </span>
                   </div>
@@ -91,7 +91,7 @@ const Products = () => {
                   <div className="space-y-3 mb-8">
                     {product.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
-                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-brand-primary rounded-full"></div>
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -100,7 +100,7 @@ const Products = () => {
                   <div className="flex items-center justify-between pt-6 border-t border-gray-50">
                     <Link 
                       to={`/products/${product.id}`}
-                      className="text-blue-600 font-bold flex items-center space-x-1 hover:translate-x-1 transition-transform"
+                      className="text-brand-primary font-bold flex items-center space-x-1 hover:translate-x-1 transition-transform"
                     >
                       <span>View Details</span>
                       <ChevronRight size={18} />
@@ -122,7 +122,7 @@ const Products = () => {
               <p className="text-gray-500 text-xl">No products found matching your search.</p>
               <button 
                 onClick={() => setSearchTerm('')}
-                className="mt-4 text-blue-600 font-bold hover:underline"
+                className="mt-4 text-brand-primary font-bold hover:underline"
               >
                 Clear all filters
               </button>

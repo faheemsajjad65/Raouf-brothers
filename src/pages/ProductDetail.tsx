@@ -15,9 +15,9 @@ const ProductDetail = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumbs */}
         <nav className="flex items-center space-x-2 text-sm text-gray-500 mb-8">
-          <Link to="/" className="hover:text-blue-600">Home</Link>
+          <Link to="/" className="hover:text-brand-primary">Home</Link>
           <span>/</span>
-          <Link to="/products" className="hover:text-blue-600">Products</Link>
+          <Link to="/products" className="hover:text-brand-primary">Products</Link>
           <span>/</span>
           <span className="text-gray-900 font-medium">{product.name}</span>
         </nav>
@@ -38,7 +38,7 @@ const ProductDetail = () => {
             </div>
             <div className="grid grid-cols-4 gap-4">
               {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="aspect-square rounded-xl overflow-hidden border border-gray-100 cursor-pointer hover:border-blue-500 transition-colors">
+                <div key={i} className="aspect-square rounded-xl overflow-hidden border border-gray-100 cursor-pointer hover:border-brand-primary transition-colors">
                   <img 
                     src={product.image} 
                     alt="Thumbnail" 
@@ -63,7 +63,7 @@ const ProductDetail = () => {
             <div className="space-y-8 mb-10">
               <div>
                 <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center space-x-2">
-                  <Info size={20} className="text-blue-600" />
+                  <Info size={20} className="text-brand-primary" />
                   <span>Key Features</span>
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -106,7 +106,7 @@ const ProductDetail = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/contact" 
-                className="flex-1 bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-blue-200"
+                className="flex-1 bg-brand-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-600 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-green-200"
               >
                 <MessageSquare size={20} />
                 <span>Request Quote</span>
@@ -132,7 +132,7 @@ const ProductDetail = () => {
                 <div className="aspect-square rounded-2xl overflow-hidden mb-4 border border-gray-100">
                   <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" referrerPolicy="no-referrer" />
                 </div>
-                <h4 className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{p.name}</h4>
+                <h4 className="font-bold text-gray-900 group-hover:text-brand-primary transition-colors">{p.name}</h4>
               </Link>
             ))}
           </div>

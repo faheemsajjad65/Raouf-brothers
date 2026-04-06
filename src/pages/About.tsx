@@ -19,7 +19,7 @@ const About = () => {
       </section>
 
       {/* Stats */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-brand-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
@@ -70,7 +70,7 @@ const About = () => {
                 referrerPolicy="no-referrer"
               />
               <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-xl hidden md:block">
-                <p className="text-blue-600 font-bold text-4xl mb-1">25+</p>
+                <p className="text-brand-primary font-bold text-4xl mb-1">25+</p>
                 <p className="text-gray-500 font-medium">Years of Trust</p>
               </div>
             </div>
@@ -83,7 +83,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-8">
+              <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-brand-primary mb-8">
                 <Target size={32} />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
@@ -93,7 +93,7 @@ const About = () => {
               </p>
             </div>
             <div className="bg-white p-12 rounded-3xl shadow-sm border border-gray-100">
-              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-blue-600 mb-8">
+              <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-brand-primary mb-8">
                 <Eye size={32} />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>

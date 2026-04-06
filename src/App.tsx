@@ -51,29 +51,33 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const isHomePage = location.pathname === '/';
+  const navBgClass = scrolled || !isHomePage ? 'bg-white shadow-md py-2' : 'bg-transparent py-4';
+  const navTextClass = scrolled || !isHomePage ? 'text-gray-900' : 'text-white';
+  const navLogoClass = scrolled || !isHomePage ? 'brightness-100' : 'brightness-0 invert';
+
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${navBgClass}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-900 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">RB</span>
-            </div>
-            <span className={`font-bold text-xl tracking-tight ${scrolled ? 'text-blue-900' : 'text-white'}`}>
-              RAOUF BROTHERS
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src="input_file_1.png" 
+              alt="Raouf Brothers Logo" 
+              className={`h-12 w-auto transition-all duration-300 ${navLogoClass}`}
+            />
           </Link>
-
+ 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
+                className={`text-sm font-bold transition-colors hover:text-brand-primary ${
                   location.pathname === link.path 
-                    ? 'text-blue-600' 
-                    : scrolled ? 'text-gray-700' : 'text-white'
+                    ? 'text-brand-primary' 
+                    : navTextClass
                 }`}
               >
                 {link.name}
@@ -81,17 +85,17 @@ const Navbar = () => {
             ))}
             <Link
               to="/contact"
-              className="bg-blue-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-blue-200"
+              className="bg-brand-primary text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-green-600 transition-all shadow-lg hover:shadow-green-200"
             >
               Request Quote
             </Link>
           </div>
-
+ 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`${scrolled ? 'text-gray-900' : 'text-white'} p-2`}
+              className={`${isOpen ? 'text-gray-900' : navTextClass} p-2 transition-colors duration-300`}
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -114,7 +118,11 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-4 text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md"
+                  className={`block px-3 py-4 text-base font-bold rounded-md transition-colors ${
+                    location.pathname === link.path 
+                      ? 'text-brand-primary bg-green-50' 
+                      : 'text-gray-900 hover:text-brand-primary hover:bg-gray-50'
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -122,7 +130,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block w-full text-center bg-blue-600 text-white px-4 py-3 rounded-md text-base font-semibold mt-4"
+                className="block w-full text-center bg-brand-primary text-white px-4 py-3 rounded-md text-base font-bold mt-4"
               >
                 Request Quote
               </Link>
@@ -140,21 +148,22 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
-                <span className="text-white font-bold">RB</span>
-              </div>
-              <span className="font-bold text-xl tracking-tight">RAOUF BROTHERS</span>
+            <div className="flex items-center mb-6">
+              <img 
+                src="input_file_1.png" 
+                alt="Raouf Brothers Logo" 
+                className="h-12 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Leading global manufacturer of premium zipper solutions and components. 
               Committed to quality, precision, and durability since 1995.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors"><Instagram size={20} /></a>
+              <a href="#" className="text-gray-400 hover:text-brand-primary transition-colors"><Facebook size={20} /></a>
+              <a href="#" className="text-gray-400 hover:text-brand-primary transition-colors"><Twitter size={20} /></a>
+              <a href="#" className="text-gray-400 hover:text-brand-primary transition-colors"><Linkedin size={20} /></a>
+              <a href="#" className="text-gray-400 hover:text-brand-primary transition-colors"><Instagram size={20} /></a>
             </div>
           </div>
 
@@ -184,19 +193,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4 text-sm text-gray-400">
               <li className="flex items-start space-x-3">
-                <MapPin size={18} className="text-blue-500 shrink-0" />
+                <MapPin size={18} className="text-brand-primary shrink-0" />
                 <span>123 Industrial Zone, Manufacturing Hub, Global City</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone size={18} className="text-blue-500 shrink-0" />
+                <Phone size={18} className="text-brand-primary shrink-0" />
                 <span>+1 (234) 567-890</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail size={18} className="text-blue-500 shrink-0" />
+                <Mail size={18} className="text-brand-primary shrink-0" />
                 <span>sales@raoufbrothers.com</span>
               </li>
               <li className="flex items-center space-x-3">
-                <MessageSquare size={18} className="text-blue-500 shrink-0" />
+                <MessageSquare size={18} className="text-brand-primary shrink-0" />
                 <span>WhatsApp: +1 987 654 321</span>
               </li>
             </ul>
@@ -247,7 +256,7 @@ export default function App() {
         <div className="fixed bottom-8 right-8 z-40 hidden md:block">
           <Link
             to="/contact"
-            className="bg-blue-600 text-white px-6 py-4 rounded-full font-bold shadow-2xl hover:bg-blue-700 transition-all flex items-center space-x-2 group"
+            className="bg-brand-primary text-white px-6 py-4 rounded-full font-bold shadow-2xl hover:bg-green-600 transition-all flex items-center space-x-2 group"
           >
             <span>Request a Quote</span>
             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />

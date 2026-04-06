@@ -28,11 +28,11 @@ const Quality = () => {
 
   return (
     <div className="pt-24">
-      <section className="bg-blue-900 py-24 text-white">
+      <section className="bg-brand-primary py-24 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold mb-6">Quality Without Compromise</h1>
-            <p className="text-xl text-blue-100 leading-relaxed">
+            <p className="text-xl text-green-50 leading-relaxed">
               Our commitment to quality is what sets us apart. We implement rigorous testing 
               protocols to ensure every component meets international standards.
             </p>
@@ -57,7 +57,7 @@ const Quality = () => {
                   <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gray-100 -z-10"></div>
                 )}
                 <div className="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow text-center">
-                  <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 mx-auto mb-6">
+                  <div className="w-16 h-16 bg-green-50 rounded-2xl flex items-center justify-center text-brand-primary mx-auto mb-6">
                     <step.icon size={32} />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
@@ -70,7 +70,7 @@ const Quality = () => {
       </section>
 
       {/* Certifications */}
-      <section className="py-24 bg-gray-900 text-white">
+      <section className="py-24 bg-brand-secondary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -87,7 +87,7 @@ const Quality = () => {
                   'ASTM D2061 Standard Test Methods'
                 ].map((cert, i) => (
                   <div key={i} className="flex items-center space-x-3">
-                    <Award size={20} className="text-blue-500" />
+                    <Award size={20} className="text-brand-primary" />
                     <span className="font-medium">{cert}</span>
                   </div>
                 ))}
@@ -97,7 +97,7 @@ const Quality = () => {
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="bg-white/5 aspect-square rounded-3xl flex items-center justify-center border border-white/10">
                   <div className="text-center">
-                    <CheckCircle2 size={40} className="text-blue-500 mx-auto mb-2" />
+                    <CheckCircle2 size={40} className="text-brand-primary mx-auto mb-2" />
                     <p className="text-xs font-bold uppercase tracking-widest text-gray-400">Certified</p>
                   </div>
                 </div>
@@ -110,10 +110,10 @@ const Quality = () => {
       {/* Testing Details */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-blue-600 rounded-[3rem] p-12 md:p-20 text-white flex flex-col lg:flex-row items-center gap-12">
+          <div className="bg-brand-primary rounded-[3rem] p-12 md:p-20 text-white flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2">
               <h2 className="text-4xl font-bold mb-6">Rigorous Durability Testing</h2>
-              <p className="text-blue-100 text-lg mb-8">
+              <p className="text-green-50 text-lg mb-8">
                 We simulate years of wear and tear in our lab to ensure our zippers never fail when it matters most.
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -126,7 +126,7 @@ const Quality = () => {
                   'Top/Bottom Stop Strength'
                 ].map((test, i) => (
                   <li key={i} className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 bg-blue-300 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-green-300 rounded-full"></div>
                     <span className="text-sm font-medium">{test}</span>
                   </li>
                 ))}
